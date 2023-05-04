@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style-gallery.css" />
+  </head>
+  <body>
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h1 class="text-center">Galería de Imágenes</h1>
+          <p class="lead text-center">
+            Aquí puedes encontrar una selección de imágenes filtrables por
+            categorías.
+          </p>
+          <hr />
+          <br />
+        </div>
+      </div>
+
+      <div class="gallery">
+        <div class="filter-buttons row justify-content-center text-center">
+          <div class="col-lg 8">
+            <div class="btn-group">
+              <button
+                type="button"
+                class="filter-button btn btn-outline-secondary active"
+                data-filter="all"
+              >
+                Todos
+              </button>
+              <button
+                type="button"
+                class="filter-button btn btn-outline-secondary"
+                data-filter="flores"
+              >
+                Flores
+              </button>
+              <button
+                type="button"
+                class="filter-button btn btn-outline-secondary"
+                data-filter="pareja"
+              >
+                Pareja
+              </button>
+              <button
+                type="button"
+                class="filter-button btn btn-outline-secondary"
+                data-filter="anillos"
+              >
+                Anillos
+              </button>
+              <button
+                type="button"
+                class="filter-button btn btn-outline-secondary"
+                data-filter="calzado"
+              >
+                Calzado
+              </button>
+              <button
+                type="button"
+                class="filter-button btn btn-outline-secondary"
+                data-filter="novia"
+              >
+                Novia
+              </button>
+              <button
+                type="button"
+                class="filter-button btn btn-outline-secondary"
+                data-filter="novio"
+              >
+                Novio
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <div class="image-grid row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 mt-4">
+  
+        <div class="col">
+
+          <div class="card image anillos" >
+            <img src="../views/img/anillo 01.jpg" class="card-img" alt="image" >
+          </div>
+        
+        </div>
+
+        <div class="col">
+          <div class="card image anillos">
+            <img src="../views/img/anillo 02.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image anillos">
+            <img src="../views/img/anillo 03.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image calzado">
+            <img src="../views/img/calzado 01.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image flores calzado">
+            <img src="../views/img/flores calzado 03.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image flores">
+            <img src="../views/img/flores 01.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image flores">
+            <img src="../views/img/flores 02.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image flores">
+            <img src="../views/img/flores 04.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image novia">
+            <img src="../views/img/novia 01.jpg" class="card-img" alt="image" >
+          </div>  
+        </div>
+
+        <div class="col">
+          <div class="card image novia">
+            <img src="../views/img/novia 02.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image novio">
+            <img src="../views/img/novio 01.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+        
+        <div class="col">
+          <div class="card image novio">
+            <img src="../views/img/novio 02.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image novio">
+            <img src="../views/img/novio 03.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card image pareja">
+            <img src="../views/img/pareja 01.jpg" class="card-img" alt="image" >
+          </div>
+        </div>
+        
+      </div>
+  -->
+        <div class="image-grid">
+          <div class="image anillos">
+            <img
+              src="../views/img/anillo 01.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: contain; height: 100%"
+            />
+          </div>
+
+          <div class="image anillos">
+            <img
+              src="../views/img/anillo 02.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: contain; height: 100%"
+            />
+          </div>
+
+          <div class="image anillos">
+            <img
+              src="../views/img/anillo 03.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: contain; height: 100%"
+            />
+          </div>
+
+          <div class="image calzado">
+            <img
+              src="../views/img/calzado 01.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: contain; height: 100%"
+            />
+          </div>
+
+          <div class="image flores calzado">
+            <img
+              src="../views/img/flores calzado 03.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: contain; height: 100%"
+            />
+          </div>
+
+          <div class="image flores">
+            <img
+              src="../views/img/flores 01.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image flores">
+            <img
+              src="../views/img/flores 02.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image flores">
+            <img
+              src="../views/img/flores 04.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image novia">
+            <img
+              src="../views/img/novia 01.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image novia">
+            <img
+              src="../views/img/novia 02.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image novio">
+            <img
+              src="../views/img/novio 01.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image novio">
+            <img
+              src="../views/img/novio 02.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image novio">
+            <img
+              src="../views/img/novio 03.jpg"
+              class="card-img"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+
+          <div class="image pareja">
+            <img
+              src="../views/img/pareja 01.jpg"
+              alt="image"
+              style="object-fit: cover; height: 100%"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Filtrar imágenes por etiquetas
+      const filterButtons = document.querySelectorAll(".filter-button"); // Seleccionar todos los botones de filtro
+      const images = document.querySelectorAll(".image"); // Seleccionar todos los contenedores de imágenes
+
+      // Agregar un evento de clic a cada botón de filtro
+      filterButtons.forEach((button) => {
+        // Cuando se hace clic en un botón
+        button.addEventListener("click", () => {
+          // Remover la clase "active" de todos los botones de filtro
+          filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+          // Agregar la clase "active" al botón seleccionado
+          button.classList.add("active");
+          const filter = button.getAttribute("data-filter"); // Obtener la etiqueta del filtro seleccionado
+
+          // Iterar sobre cada imagen y aplicar el filtro
+          images.forEach((image) => {
+            if (filter === "all" || image.classList.contains(filter)) {
+              // Mostrar la imagen si coincide con el filtro o si se selecciona "all"
+              image.style.display = "block";
+            } else {
+              // Ocultar la imagen si no coincide con el filtro
+              image.style.display = "none";
+            }
+          });
+        });
+      });
+
+      // // Lightbox
+      // const imageGrid = document.querySelector('.image-grid');
+      // const lightbox = document.createElement('div');
+      // lightbox.classList.add('lightbox');
+      // document.body.appendChild(lightbox);
+
+      // imageGrid.addEventListener('click', (e) => {
+      //   if (e.target !== imageGrid) {
+      //     lightbox.innerHTML = `<img src="${e.target.src}" class="lightbox-image">`;
+      //     lightbox.style.display = 'flex';
+      //   }
+      // });
+
+      // lightbox.addEventListener('click', () => {
+      //   lightbox.style.display = 'none';
+      // });
+    </script>
+  </body>
+</html>

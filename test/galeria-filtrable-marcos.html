@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filterable responsive lightbox gallery tutorial</title>
+
+    <!-- magnific-popup css cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    />
+
+    <!-- custom css file link -->
+    <link rel="stylesheet" href="galeri-filtrable.css" />
+  </head>
+  <body>
+    <div class="gallery">
+      <ul class="controls">
+        <li class="buttons active" data-filter="all">Todos</li>
+        <li class="buttons" data-filter="flores">Flores</li>
+        <li class="buttons" data-filter="anillo">Anillos</li>
+        <li class="buttons" data-filter="novio">Novio</li>
+        <li class="buttons" data-filter="novia">Novia</li>
+        <li class="buttons" data-filter="calzado">Calzado</li>
+      </ul>
+
+      <div class="image-container">
+        <a href="../views/img/flores 01.jpg" class="image flores">
+          <img src="../views/img/flores 01.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/flores 02.jpg" class="image flores">
+          <img src="../views/img/flores 02.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/flores 04.jpg" class="image flores">
+          <img src="../views/img/flores 04.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/flores calzado 03.jpg" class="image flores calzado">
+          <img src="../views/img/flores calzado 03.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/calzado 01.jpg" class="image calzado">
+          <img src="../views/img/calzado 01.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/anillo 01.jpg" class="image anillo">
+          <img src="../views/img/anillo 01.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/anillo 02.jpg" class="image anillo">
+          <img src="../views/img/anillo 02.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/anillo 03.jpg" class="image anillo">
+          <img src="../views/img/anillo 03.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/pareja 01.jpg" class="image oareja">
+          <img src="../views/img/pareja 01.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/novia 01.jpg" class="image novia">
+          <img src="../views/img/novia 01.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/novia 02.jpg" class="image novia">
+          <img src="../views/img/novia 02.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/novio 02.jpg" class="image novio">
+          <img src="../views/img/novio 02.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/novio 01.jpg" class="image novio">
+          <img src="../views/img/novio 01.jpg" alt="" />
+        </a>
+
+        <a href="../views/img/novio 03.jpg" class="image novio">
+          <img src="../views/img/novio 03.jpg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <!-- jquery cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- magnific popup js cdn link  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".buttons").click(function () {
+          $(this).addClass("active").siblings().removeClass("active");
+
+          var filter = $(this).attr("data-filter");
+
+          if (filter == "all") {
+            $(".image").show(400);
+          } else {
+            $(".image")
+              .not("." + filter)
+              .hide(200);
+            $(".image")
+              .filter("." + filter)
+              .show(400);
+          }
+        });
+
+        $(".gallery").magnificPopup({
+          delegate: "a",
+          type: "image",
+          gallery: {
+            enabled: true,
+          },
+        });
+      });
+    </script>
+  </body>
+</html>
